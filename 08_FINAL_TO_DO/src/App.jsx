@@ -37,7 +37,11 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    setTask((prev) => prev.filter((item) => item.id !== Number(id)));
+    const isConfirmed = confirm("Are You Sure,You Want To Delete This Task?");
+
+    if (isConfirmed) {
+      setTask((prev) => prev.filter((item) => item.id !== Number(id)));
+    }
   };
 
   const updateTodo = (id, newTask) => {
