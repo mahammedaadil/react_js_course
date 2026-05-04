@@ -1,4 +1,4 @@
-import { useCounterStore } from "../store/useCounterStore.js";
+import { useCounterStore } from "../store/counterStore.js";
 
 function Counter() {
   const { count, increase, decrease, reset } = useCounterStore();
